@@ -6,6 +6,7 @@ To predict fraudulent credit card transactions with the help of machine learning
 
 The data set is taken from the Kaggle website (https://www.kaggle.com/mlg-ulb/creditcardfraud) and has a total of 2,84,807 transactions; out of these, 492 are fraudulent. Since the data set is highly imbalanced, it needs to be handled before model building.
 
+
 Business problem overview
 
 For many banks, retaining high profitable customers is the number one business goal. Banking fraud, however, poses a significant threat to this goal for different banks. In terms of substantial financial losses, trust and credibility, this is a concerning issue to both banks and customers alike.
@@ -20,8 +21,11 @@ Understanding and defining fraud
 Credit card fraud is any dishonest act or behaviour to obtain information without proper authorisation from the account holder for financial gain. Among different ways of committing frauds, skimming is the most common one, which is a way of duplicating information that is located on the magnetic strip of the card. Apart from this, following are the other ways:
 
 - Manipulation/alteration of genuine cards
+- 
 - Creation of counterfeit cards
+- 
 - Stealing/loss of credit cards
+- 
 - Fraudulent telemarketing
  
 
@@ -35,7 +39,14 @@ Approach to solve the problem
 The approach can be briefly summarised in the following four steps:
 
 Data Understanding: Load the data and understand the features present in it. This would help choose the features that are needed for the final model.
+
 Exploratory data analytics (EDA): In this step, we perform univariate and bivariate analysis of the data, followed by feature transformations, if necessary. For the current data set, because Gaussian variables are used, there is no need to perform Z-scaling. However, if there is any skewness in the data, we try to mitigate it, as it might cause problems during the model building phase.
+
 Train/Test split: For validation, we used the k-fold cross-validation method with an appropriate k value so that the minority class is correctly represented in the test folds.
+
 Model building / hyperparameter tuning: In this final step, try different models and fine-tune their hyperparameters until we get the desired level of performance on the given data set. Also try and check if we can get a better model by various sampling techniques.
-Model evaluation: Models are evaluated using appropriate evaluation metrics. Note that since the data is imbalanced, it is more important to identify the fraudulent transactions accurately than the non-fraudulent ones. Choose an appropriate evaluation metric that reflects this business goal.
+
+
+Model evaluation
+
+Models are evaluated using appropriate evaluation metrics. Note that since the data is imbalanced, it is more important to identify the fraudulent transactions accurately than the non-fraudulent ones. Choose an appropriate evaluation metric that reflects this business goal.
